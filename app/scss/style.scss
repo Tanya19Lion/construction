@@ -1,3 +1,157 @@
 @import "global";
 @import "vars";
-@import "fonts";
+// @import "fonts";
+
+//start header
+.header {
+    margin-bottom: 100px;
+}
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 4;
+    &::after {
+        position: absolute;
+        content: "";
+        background-color: rgba(17, 37, 55, .969);
+        top: 0;
+        right: 50%;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    &-logo {
+        margin-left: 120px;
+    }
+    &-phone a {
+        color: #252525;
+        padding-left: 20px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/icons/phone-receiver.png);
+            width: 12px;
+            height: 15px;
+            left: 0;
+            top: 6px;
+        }
+    }
+}
+.header__main {
+    position: relative;
+    padding-bottom: 50px;
+    &::after {
+        position: absolute;
+        content: "";
+        background-color: rgba(17, 37, 55, .969);
+        top: 0;
+        right: 50%;
+        height: 100%;
+        width: 100%;
+    }
+    &-images img {
+        height: 595px;
+        width: 1170px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &-content {
+        max-width: 375px;
+        position: absolute;
+        left: 90px;
+        top: 170px;
+        z-index: 4;
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        left: 65px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    &-text {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    &-btn {
+        display: inline-block;
+        background-color: transparent;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 20px 27px;
+        border: 1px solid #fff;
+        transition: all .5s;
+        &:hover {
+            background-color: $orange;
+        }
+        & a {
+            color: #fff;
+        }
+        & img {
+            margin-left: 35px;
+        }
+    }
+    &-social {
+        position: relative;
+        z-index: 4;
+        margin-top: 40px;
+        & li {
+            display: inline-block;
+            & + li {
+                margin-left: 25px;
+            }
+        }
+    }
+}
+//end header
+
+//start about
+.about {
+    margin-bottom: 100px;
+}
+.about__items {
+    display: flex;
+    justify-content: space-between;
+}
+.about__item {
+    max-width: 255px;
+    &:nth-child(even) {
+        margin-top: 220px;
+    }
+    &-number {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        color: $pink;
+        font-size: 85px;
+        line-height: 95px;
+        margin-bottom: 20px;
+    }
+    &-title {
+        color: #1a292f;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 25px;
+    }
+    &-text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+    }
+}
+//end about
+
+
+// .bg {
+//   
+//     opacity: 0.969;
+// }
+  
