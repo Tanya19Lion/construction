@@ -9,5 +9,13 @@ $(function(){
         arrows: false
     });
 
+    $(".portfolio__inner").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+
+    });
+
 });
 
