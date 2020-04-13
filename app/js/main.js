@@ -1,5 +1,10 @@
 $(function(){
     
+    $(".header__menu-icon").on("click", function(){
+        $(".header__menu-mobile").toggleClass("active");
+        $(".header__menu-content").slideToggle();
+    })
+
     $(".header__main-inner").slick({
         infinite: true,
         slidesToShow: 1,
@@ -23,6 +28,16 @@ $(function(){
             $(this).addClass('active');
             $('#'+id).addClass('active-tab').fadeIn();
             return false;
-        });
+    });
+
+    $(".clients__inner").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: true,
+        variableWidth: true,
+        speed: 100
+    });
 });
 
