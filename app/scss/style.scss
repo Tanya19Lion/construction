@@ -1,6 +1,5 @@
 @import "global";
 @import "vars";
-// @import "fonts";
 
 //start header
 .header {
@@ -26,6 +25,12 @@
     }
     &-logo {
         margin-left: 120px;
+        background-image: url(../images/header/header_logo.png);
+        width: 98px;
+        height: 29px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     &-phone a {
         color: #252525;
@@ -191,6 +196,7 @@
 }
 .about__item {
     max-width: 255px;
+    margin: 20px;
     &:nth-child(even) {
         margin-top: 220px;
     }
@@ -233,6 +239,7 @@
         background-size: cover;
         position: relative;
         transition: all .5s;
+        cursor: pointer;
     }
     &-content {
         transition: all .5s;
@@ -293,6 +300,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 .slider-btn.slick-prev {
     right: 60px;
@@ -325,11 +333,11 @@
     &-tabs {
         max-width: 215px;
     }
-    &-tabs p {
+    &-tabs div {
         color: $service;
         font-weight: 300;
         font-size: 18px;
-        & + p {
+        & + div {
             margin-top: 75px;
         }
     }
@@ -347,6 +355,9 @@
     }
     &-text {
         max-width: 550px;
+        & .services__inner-btn {
+            display: none;
+        }
     }
     &-title {
         color: $title;
@@ -422,6 +433,9 @@
         position: relative;
         margin-right: 45px;
         margin-bottom: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &:nth-child(3n + 3) {
             margin-right: 0;
         }
@@ -490,7 +504,7 @@
 }
 .contacts__info {
     &-box {
-        padding: 60px 90px 45px 0;
+        padding: 60px 0px 45px;
         position: relative;
         z-index: 4;
         &::after {
@@ -562,6 +576,7 @@
             border-bottom: 1px solid #918e8b;
             margin-bottom: 30px;
             color: #fff;
+            padding-right: 35px;
             &::placeholder {
                 color: #918e8b;
             }
@@ -751,3 +766,5 @@
     }
 }
 //end footer
+
+@import "media";

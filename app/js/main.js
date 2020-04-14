@@ -18,7 +18,30 @@ $(function(){
         slidesToShow: 4,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slider-btn slick-prev"></button>',
-        nextArrow: '<button type="button" class="slider-btn slick-next"></button>'
+        nextArrow: '<button type="button" class="slider-btn slick-next"></button>',
+        responsive: [
+            {
+              breakpoint: 924,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+               }
+            },
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
     $('.services__inner .tab').on('click', function(event) {
@@ -37,7 +60,19 @@ $(function(){
         dots: true,
         centerMode: true,
         variableWidth: true,
-        speed: 100
+        speed: 100,
+        responsive: [
+            {
+              breakpoint: 840,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
+
+    new WOW().init();
+
 });
 
