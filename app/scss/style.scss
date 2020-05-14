@@ -52,6 +52,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
     &-mobile {
         width: 30px;
@@ -136,7 +137,8 @@
         padding: 20px 27px;
         border: 1px solid #fff;
         transition: all .5s;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $orange;
         }
         & a {
@@ -177,7 +179,8 @@
     line-height: 30px;
     color:#918e8b;
     transition: all .5s;
-    &:hover {
+    &:hover,
+    &:focus {
         color: $orange;
     }
 }
@@ -309,10 +312,12 @@
 .slider-btn.slick-next {
     right: 0;
 }
-.portfolio__inner-item:hover .portfolio__inner-content {
+.portfolio__inner-item:hover .portfolio__inner-content,
+.portfolio__inner-item:focus .portfolio__inner-content {
     opacity: 0;
 }
-.portfolio__inner-item:hover .portfolio__inner-details {
+.portfolio__inner-item:hover .portfolio__inner-details,
+.portfolio__inner-item:focus .portfolio__inner-details {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,6 +342,7 @@
         color: $service;
         font-weight: 300;
         font-size: 18px;
+        cursor: pointer;
         & + div {
             margin-top: 75px;
         }
@@ -384,7 +390,8 @@
         line-height: 30px;
         flex: 1 0 auto;
         transition: all .5s;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $orange;
         }
     }
@@ -395,7 +402,8 @@
         font-weight: 900;
         text-transform: uppercase;
         transition: all .5s;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $orange;
             border-color: #fff;
             color: #fff;
@@ -534,7 +542,8 @@
         & a {
             color: #fff;
             transition: all .5s;
-            &:hover {
+            &:hover,
+            &:focus {
                 color: #918e8b;
             }
         }
@@ -577,6 +586,9 @@
             margin-bottom: 30px;
             color: #fff;
             padding-right: 35px;
+            &:focus {
+                border-bottom-color: #fff;
+            }
             &::placeholder {
                 color: #918e8b;
             }
@@ -596,7 +608,8 @@
             cursor: pointer;
             transition: all .5s;
             margin-bottom: 20px;
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: #fff;
                 color: #182c3d;
             }
@@ -702,6 +715,7 @@
         width: 26px;
         height: 3px;
         background-color: #cdd3cf;
+        cursor: pointer;
     }
 }
 .slick-slide.slick-current {
